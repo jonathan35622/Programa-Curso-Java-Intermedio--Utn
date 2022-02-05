@@ -1,6 +1,5 @@
 package controllers;
 import static models.Constantes.CONSUMO_ENERGETICO_DEF;
-
 /**
  *
  * @author Jsuarez
