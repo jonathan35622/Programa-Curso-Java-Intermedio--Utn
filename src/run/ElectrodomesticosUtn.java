@@ -46,7 +46,6 @@ public class ElectrodomesticosUtn {
                 listaElectrodomesticos.add(new Televisor(eleccionPeso,eleccionPrecioBase , energia, eleccionColor, resolucion, true));
             }
             otroProducto = ingresoProducto.seleccionarOtroProducto();
-
         } while (otroProducto);
         double sumaElectrodomesticos = 0;
         double sumaTelevisiones = 0;
