@@ -1,5 +1,4 @@
 package run;
-
 import View.IngresoProductoView;
 import controllers.ElectrodomesticoController;
 import java.util.ArrayList;
@@ -7,18 +6,15 @@ import javax.swing.JOptionPane;
 import models.Electrodomestico;
 import models.Lavarropa;
 import models.Televisor;
-
 /**
  *
- * @author WIN-10
+ * @author Jsuarez
  */
 public class ElectrodomesticosUtn {
-
     public static void main(String[] args) {
         boolean otroProducto = false;
        //array que incrementa si se ingresan más elementos 
-        ArrayList listaElectrodomesticos = new ArrayList();
-        
+        ArrayList listaElectrodomesticos = new ArrayList(); 
         do {
             //pregunto si quiere ingresar otro producto 
             //seleccion guarda:
@@ -52,7 +48,6 @@ public class ElectrodomesticosUtn {
             otroProducto = ingresoProducto.seleccionarOtroProducto();
 
         } while (otroProducto);
-
         double sumaElectrodomesticos = 0;
         double sumaTelevisiones = 0;
         double sumaLavadoras = 0;
@@ -62,23 +57,17 @@ public class ElectrodomesticosUtn {
             if (electroList instanceof Electrodomestico) {
                sumaElectrodomesticos += electrodomesticoController.precioFinal(((Electrodomestico) electroList).getConsumoEnergetico(), ((Electrodomestico) electroList).getPeso(), ((Electrodomestico) electroList).getPrecioBase());
             }
-
             if (electroList instanceof Lavarropa) {
                 sumaLavadoras += electrodomesticoController.precioFinal(((Lavarropa) electroList).getConsumoEnergetico(), ((Lavarropa) electroList).getPeso(), ((Lavarropa) electroList).getPrecioBase());
 
             }
             if (electroList instanceof Televisor) {
                 sumaTelevisiones += electrodomesticoController.precioFinal(((Televisor) electroList).getConsumoEnergetico(), ((Televisor) electroList).getPeso(), ((Televisor) electroList).getPrecioBase());
-
             }
-        }
-        
-        
+        }  
         System.out.println("sumaElectrodomesticos = " + sumaElectrodomesticos);
         System.out.println("sumaLavadoras = " + sumaLavadoras);
-        System.out.println("sumaTelevisiones = " + sumaTelevisiones);
-        
-       
+        System.out.println("sumaTelevisiones = " + sumaTelevisiones);    
     }
- 
+
 }
