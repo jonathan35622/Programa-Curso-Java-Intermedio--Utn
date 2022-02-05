@@ -1,15 +1,13 @@
 
 package models;
-
 /**
  *
- * @author WIN-10
+ * @author Jsuarez
  */
 public class Lavarropa extends Electrodomestico{
-    
       //atributo propio de lavarropa
       private int carga;
-      //constructor de 5 parámetros 
+      //constructor sobrecargado 
     public Lavarropa( double peso,double precioBase, char consumoEnergetico, String color, int carga) {
         super( peso, precioBase, consumoEnergetico,  color);
         this.carga = carga;
@@ -18,12 +16,7 @@ public class Lavarropa extends Electrodomestico{
     public int getCarga() {
         return carga;
     }
-
     public void setCarga(int carga) {
         this.carga = carga;
-    }
-
-      
-    
-    
+    }   
 }
