@@ -1,15 +1,11 @@
 package controllers;
-
 import static models.Constantes.CONSUMO_ENERGETICO_DEF;
 
 /**
  *
- * @author WIN-10
+ * @author Jsuarez
  */
-public class ElectrodomesticoController {
-
-    
-    
+public class ElectrodomesticoController {   
 //Método público para determinar precio final del producto    
     public double precioFinal(char consumoEnergetico, double peso, double precioBase) {
         double plus = 0;
@@ -33,7 +29,6 @@ public class ElectrodomesticoController {
                 plus += 10;
                 break;
         }
-
         if (peso >= 0 && peso < 19) {
             plus += 10;
         } else if (peso >= 20 && peso < 49) {
@@ -43,13 +38,11 @@ public class ElectrodomesticoController {
         } else if (peso >= 80) {
             plus += 100;
         }
-
         return precioBase + plus;
     }
     //Método público comprueba consumo energético del producto
     public char comprobarConsumoEnergetico(char consumoEnergetico) {
         char consumo;
-
         if (consumoEnergetico >= 65 && consumoEnergetico <= 70) {
             consumo = consumoEnergetico;
         } else {
@@ -57,5 +50,4 @@ public class ElectrodomesticoController {
         }
         return consumo;
     }
-
 }
